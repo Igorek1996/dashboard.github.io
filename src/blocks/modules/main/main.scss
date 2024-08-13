@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 0 1 100%;
+  padding: 41px 95px 41px 71px;
+  height: 100%;
+  overflow-y: auto;
+  @media screen and (max-width: 1023px) {
+    padding: 40px;
+    gap: 20px;
+    &.active {
+      overflow: hidden;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 20px 15px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

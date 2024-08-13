@@ -1,0 +1,14 @@
+section.content#content
+
+.content#content-storage(style="display: none")
+    .content__header.hidden
+        .content__info
+            h2.content__title All Customers
+            .content__subtext
+                span.accent Active Members
+        include ../search/search
+    .content__table.hidden
+        include ../table/table
+    .content__footer
+        .content__text Showing data 1 to 8 of  256K entries
+        include ../pagination/pagination

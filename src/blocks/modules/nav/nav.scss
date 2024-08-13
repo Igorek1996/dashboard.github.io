@@ -1,0 +1,66 @@
+.nav {
+  margin-top: 0;
+  margin-bottom: auto;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    @media screen and (max-width: 767px) {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      transition: $trsn;
+    }
+    &-text {
+      margin-left: 0;
+      margin-right: auto;
+      transition: $trsn;
+    }
+
+    &-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: $trsn;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 8px 11px 11px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 8px;
+    height: 46px;
+    color: $color_nav;
+    &.active {
+      background: $color_active;
+      color: $color_white;
+    }
+    &:hover {
+      background: $color_active;
+      color: $color_white;
+    }
+  }
+}

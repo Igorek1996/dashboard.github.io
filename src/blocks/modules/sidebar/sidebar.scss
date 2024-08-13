@@ -1,0 +1,66 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 53px;
+  background: $color_white;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+  flex: 0 0 306px;
+  width: 306px;
+  height: 100%;
+  padding: 36px 28px 76px;
+  transition: $trsn;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color_active;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $color_active;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color_divider;
+    border-radius: 3px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 40px 20px;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    z-index: 2;
+    &.active {
+      left: 0;
+      & ~ .overlay {
+        opacity: 1;
+        left: 0;
+        pointer-events: all;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+.overlay {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba($color_active, 0.7);
+  z-index: 1;
+  transition: opacity $trsn;
+}

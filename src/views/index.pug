@@ -1,0 +1,12 @@
+extends layouts/default
+
+block variables
+	- const title = "Dashboard"
+
+block content
+	include ../blocks/modules/sidebar/sidebar
+	include ../blocks/modules/main/main
+
+block scripts
+	//- script(src="js/vendor.js")
+	script(src="js/main.js")

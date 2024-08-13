@@ -1,0 +1,42 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  &__status {
+    text-align: center;
+    display: block;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 4px 12px;
+    &.active {
+      color: $color_error;
+      background: $color_error_light;
+    }
+    &.inactive {
+      color: $color_success;
+      background: $color_success_bg;
+      border-color: currentColor;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $color_divider;
+  }
+  th,
+  td {
+    font-weight: 500;
+    white-space: nowrap;
+    padding-right: 20px;
+    &:last-child {
+      padding-right: 4px;
+    }
+  }
+  th {
+    padding-block: 14px;
+    color: $color_text_light;
+  }
+  td {
+    padding-block: 19px;
+  }
+}

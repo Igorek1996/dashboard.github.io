@@ -1,0 +1,25 @@
+.search {
+  position: relative;
+  flex: 0 0 216px;
+  margin-top: 14px;
+  @media screen and (max-width: 767px) {
+    flex: auto;
+    margin-top: 0;
+  }
+  &__btn {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  input {
+    width: 100%;
+    padding-left: 40px;
+  }
+}
