@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body id="body">
+    <div class="wrapper"> 
+      <aside class="sidebar" id="sidebar"><a class="logo" href="/"><span class="logo__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#setting"></use>
+            </svg></span><span class="logo__text">Dashboard</span><span class="logo__version">v.01</span></a>
+        <div class="nav">
+          <ul>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link" href="/"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#key-square"></use>
+                  </svg></span><span class="nav__item-text">Dashboard</span><span class="nav__item-arrow"></span></a></li>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link" href="/product"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#3d-square"></use>
+                  </svg></span><span class="nav__item-text">Product</span><span class="nav__item-arrow">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#chevron-right"></use>
+                  </svg></span></a></li>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link active" href="/customers"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#user-square"></use>
+                  </svg></span><span class="nav__item-text">Customers</span><span class="nav__item-arrow">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#chevron-right"></use>
+                  </svg></span></a></li>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link" href="/income"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#wallet-money"></use>
+                  </svg></span><span class="nav__item-text">Income</span><span class="nav__item-arrow">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#chevron-right"></use>
+                  </svg></span></a></li>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link" href="/promote"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#discount-shape"></use>
+                  </svg></span><span class="nav__item-text">Promote</span><span class="nav__item-arrow">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#chevron-right"></use>
+                  </svg></span></a></li>
+            <li class="nav__item hidden"><a class="nav__link js-nav__link" href="/help"><span class="nav__item-icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#message-question"></use>
+                  </svg></span><span class="nav__item-text">Help</span><span class="nav__item-arrow">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#chevron-right"></use>
+                  </svg></span></a></li>
+          </ul>
+        </div>
+        <div class="user hidden">
+          <div class="user__img"><img src="img/user.jpg" alt="avatar"></div>
+          <div class="user__info">
+            <div class="user__name">Evano</div>
+            <div class="user__job">Project Manager</div>
+          </div>
+        </div>
+      </aside>
+      <div class="overlay" id="overlay"></div>
+      <main class="main" id="main">   
+        <button class="burger" id="burger"><span> </span><span> </span><span> </span></button>
+        <div class="main__row">
+          <h1 class="title hidden">Hello Evano 👋🏼,</h1>
+        </div>
+        <section class="content" id="content"></section>
+        <div class="content" id="content-storage" style="display: none">
+          <div class="content__header hidden">
+            <div class="content__info">
+              <h2 class="content__title">All Customers</h2>
+              <div class="content__subtext"><span class="accent">Active Members</span></div>
+            </div>
+            <form class="search">
+              <button class="search__btn">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <input type="search" placeholder="Search">
+            </form>
+          </div>
+          <div class="content__table hidden">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Company</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Country</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jane Cooper</td>
+                  <td>Microsoft</td>
+                  <td>(225) 555-0118</td>
+                  <td>jane@microsoft.com</td>
+                  <td>United States</td>
+                  <td><span class="table__status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Floyd Miles</td>
+                  <td>Yahoo</td>
+                  <td>(205) 555-0100</td>
+                  <td>floyd@yahoo.com</td>
+                  <td>Kiribati</td>
+                  <td><span class="table__status inactive">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>Ronald Richards</td>
+                  <td>Adobe</td>
+                  <td>(302) 555-0107</td>
+                  <td>ronald@adobe.com</td>
+                  <td>Israel</td>
+                  <td><span class="table__status inactive">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>Marvin McKinney</td>
+                  <td>Tesla</td>
+                  <td>(252) 555-0126</td>
+                  <td>marvin@tesla.com</td>
+                  <td>Iran</td>
+                  <td> <span class="table__status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Jerome Bell</td>
+                  <td>Google</td>
+                  <td>(629) 555-0129</td>
+                  <td>jerome@google.com</td>
+                  <td>Réunion</td>
+                  <td> <span class="table__status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Kathryn Murphy</td>
+                  <td>Microsoft</td>
+                  <td>(406) 555-0120</td>
+                  <td>kathryn@microsoft.com</td>
+                  <td>Curaçao</td>
+                  <td> <span class="table__status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Jacob Jones</td>
+                  <td>Yahoo</td>
+                  <td>(208) 555-0112</td>
+                  <td>jacob@yahoo.com</td>
+                  <td>Brazil</td>
+                  <td> <span class="table__status active">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Kristin Watson</td>
+                  <td>Facebook</td>
+                  <td>(704) 555-0127</td>
+                  <td>kristin@facebook.com</td>
+                  <td>Åland Islands</td>
+                  <td> <span class="table__status inactive">Inactive</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="content__footer">
+            <div class="content__text">Showing data 1 to 8 of  256K entries</div>
+            <div class="pagination hidden">
+              <ul> 
+                <li><a class="pagination__link" href="#">< </a></li>
+                <li><a class="pagination__link active" href="#">1 </a></li>
+                <li><a class="pagination__link" href="#">2 </a></li>
+                <li><a class="pagination__link" href="#">3 </a></li>
+                <li><a class="pagination__link" href="#">4 </a></li>
+                <li><span>... </span></li>
+                <li><a class="pagination__link" href="#">40</a></li>
+                <li><a class="pagination__link" href="#">></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
